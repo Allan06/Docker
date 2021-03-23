@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  nodejs-react:
+    container_name: nodejs-react
+    build:
+      context: .
+      dockerfile: reactJs/Dockerfile
+    ports:
+      - 3001:3000
+    
+    depends_on:
+      nodejs-game:
+        condition: service_healthy
+      nodejs-chat:
+        condition: service_healthy
+        
+  nodejs-chat:
+    container_name: nodejs-chat
+    image: nodejs
+    build:
+      context: .
+      dockerfile: nodeJs/chat/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "80:8080"
+
+  nodejs-game:
+    container_name: nodejs-game
+    image: nodejs
+    build:
+      context: .
+      dockerfile: nodeJs/game/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "81:8081"
