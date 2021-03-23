@@ -22,4 +22,9 @@ Nous avons testé le projet en lançant les différents composants à l'aide
 
 
 
+Lancement du projet:
 
+    Suivre le lancerment initial sur le site de la source du projet
+    Serveur SpringBoot : -> Avoir Maven installé
+                         -> Effectuer au sein du dossier /backEnd : mvn compile et un mvn clean install pour crére le fichier Jar 
+                         -> Exécution du serveur SpringBoot mvn spring-boot:run
