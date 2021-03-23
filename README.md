@@ -17,8 +17,8 @@ Groupe :
     Mise en place du docker-compose.yml
         -> Racine du projet
 
-Nous avons testé le projet en lançant les différents composants, les composants lancé à l'aide 
-"docker build -t nomImage:version . " fonctionnent correctement, cependant lors de l'exécution nous avons des erreurs lié à la création de l'image du serveur Spring Boot. 
+Nous avons testé le projet en lançant les différents composants à l'aide 
+"docker build -t nomImage:version . ". Ils fonctionnent correctement, cependant lors de l'exécution en mode "docker-compose build", nous avons des erreurs lié à la création de l'image du serveur Spring Boot. 
 
 
 
