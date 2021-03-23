@@ -34,3 +34,9 @@ services:
     restart: unless-stopped
     ports:
       - "81:8081"
+      
+  spring-boot-backend:
+    container_name: spring-boot-backend
+    build:
+      context: .
+      dockerfile: backEnd/Dockerfile
